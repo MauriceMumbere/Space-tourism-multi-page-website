@@ -22,12 +22,9 @@ const activeDestination = computed(() => {
       <h2 class="text-2xl">
         <span class="opacity-50 mr-4">01</span> PICK YOUR DESTINATION
       </h2>
-
-      <!-- Div principal -->
       <div
         class="flex flex-col lg:flex-row py-18 justify-between items-center px-12"
       >
-        <!-- Partie images -->
         <div>
           <div v-if="activeDestination">
             <img
@@ -37,10 +34,7 @@ const activeDestination = computed(() => {
             />
           </div>
         </div>
-
-        <!-- Partie contenu -->
         <div class="max-w-[445px] text-center lg:text-left mt-15 lg:mt-0">
-          <!-- Tabs -->
           <div
             class="flex justify-center lg:justify-start space-x-8 mb-8 uppercase tracking-widest"
           >
@@ -56,22 +50,14 @@ const activeDestination = computed(() => {
               {{ d.name }}
             </button>
           </div>
-
-          <!-- Contenu -->
           <div v-if="activeDestination">
-            <!-- Titre -->
             <h1 class="text-8xl uppercase mb-6">
               {{ activeDestination.name }}
             </h1>
-
-            <!-- Description -->
             <p class="text-blue-200 leading-relaxed mb-8">
               {{ activeDestination.description }}
             </p>
-
             <hr class="border-white/20 mb-8" />
-
-            <!-- Distance & travel -->
             <div
               class="flex justify-center lg:justify-start space-x-16 uppercase"
             >
@@ -79,7 +65,6 @@ const activeDestination = computed(() => {
                 <p class="text-sm text-blue-200">Avg. distance</p>
                 <p class="text-2xl">{{ activeDestination.distance }}</p>
               </div>
-
               <div>
                 <p class="text-sm text-blue-200">Est. travel time</p>
                 <p class="text-2xl">{{ activeDestination.travel }}</p>
