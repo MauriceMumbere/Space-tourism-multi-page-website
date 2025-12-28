@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import { ref } from "vue";
-import { useGetDataStore } from "~/store/getData";
+import { useGetDataStore } from "~/store/getdata";
 
 const store = useGetDataStore();
 onMounted(() => {
